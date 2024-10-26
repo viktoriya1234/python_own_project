@@ -2,28 +2,33 @@
 
 {% block main %}
 <section id="banner">
-
     <!-- Slider -->
     <div id="main-slider" class="flexslider">
+        <input type="radio" name="flexslider" id="slider1" checked>
+        <input type="radio" name="flexslider" id="slider2" checked>
         <ul class="slides">
             <li>
-                <img src="img/slides/1.jpg" alt="" />
+                <img src="{{ url_for('static', filename='img/slides/1.jpg') }}" alt=""/>
                 <div class="flex-caption container">
                     <h3>Smart Learning..</h3>
-                    <p>Doloribus omnis minus temporibus perferendis ipsa<br /> architecto non, magni quam</p>
+                    <p>Doloribus omnis minus temporibus perferendis ipsa<br/> architecto non, magni quam</p>
                     <a href="#" class="btn btn-theme">Read More</a>
                 </div>
             </li>
             <li>
-                <img src="img/slides/2.jpg" alt="" />
+                <img src="{{ url_for('static', filename='img/slides/2.jpg') }}" alt=""/>
                 <div class="flex-caption container">
                     <h3>Best Educational Campus..</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing<br /> elitincidunt eius magni
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing<br/> elitincidunt eius magni
                         provident.</p>
                     <a href="#" class="btn btn-theme">Read More</a>
                 </div>
             </li>
         </ul>
+        <div class="radio-label">
+            <label for="slider1"></label>
+            <label for="slider2"></label>
+        </div>
     </div>
     <!-- end slider -->
 
@@ -52,8 +57,8 @@
         <div class="row">
             <div class="features">
                 <div class="col-md-4 col-sm-6 wow fadeInUp animated" data-wow-duration="300ms"
-                    data-wow-delay="0ms"
-                    style="visibility: visible; -webkit-animation-duration: 300ms; -webkit-animation-delay: 0ms;">
+                     data-wow-delay="0ms"
+                     style="visibility: visible; -webkit-animation-duration: 300ms; -webkit-animation-delay: 0ms;">
                     <div class="media service-box">
                         <div class="pull-left">
                             <i class="fa fa-leanpub"></i>
@@ -67,8 +72,8 @@
                 </div><!--/.col-md-4-->
 
                 <div class="col-md-4 col-sm-6 wow fadeInUp animated" data-wow-duration="300ms"
-                    data-wow-delay="100ms"
-                    style="visibility: visible; -webkit-animation-duration: 300ms; -webkit-animation-delay: 100ms;">
+                     data-wow-delay="100ms"
+                     style="visibility: visible; -webkit-animation-duration: 300ms; -webkit-animation-delay: 100ms;">
                     <div class="media service-box">
                         <div class="pull-left">
                             <i class="fa fa-users"></i>
@@ -82,8 +87,8 @@
                 </div><!--/.col-md-4-->
 
                 <div class="col-md-4 col-sm-6 wow fadeInUp animated" data-wow-duration="300ms"
-                    data-wow-delay="200ms"
-                    style="visibility: visible; -webkit-animation-duration: 300ms; -webkit-animation-delay: 200ms;">
+                     data-wow-delay="200ms"
+                     style="visibility: visible; -webkit-animation-duration: 300ms; -webkit-animation-delay: 200ms;">
                     <div class="media service-box">
                         <div class="pull-left">
                             <i class="fa fa-trophy"></i>
@@ -97,8 +102,8 @@
                 </div><!--/.col-md-4-->
 
                 <div class="col-md-4 col-sm-6 wow fadeInUp animated" data-wow-duration="300ms"
-                    data-wow-delay="300ms"
-                    style="visibility: visible; -webkit-animation-duration: 300ms; -webkit-animation-delay: 300ms;">
+                     data-wow-delay="300ms"
+                     style="visibility: visible; -webkit-animation-duration: 300ms; -webkit-animation-delay: 300ms;">
                     <div class="media service-box">
                         <div class="pull-left">
                             <i class="fa fa-user-plus"></i>
@@ -112,8 +117,8 @@
                 </div><!--/.col-md-4-->
 
                 <div class="col-md-4 col-sm-6 wow fadeInUp animated" data-wow-duration="300ms"
-                    data-wow-delay="400ms"
-                    style="visibility: visible; -webkit-animation-duration: 300ms; -webkit-animation-delay: 400ms;">
+                     data-wow-delay="400ms"
+                     style="visibility: visible; -webkit-animation-duration: 300ms; -webkit-animation-delay: 400ms;">
                     <div class="media service-box">
                         <div class="pull-left">
                             <i class="fa fa-newspaper-o"></i>
@@ -127,8 +132,8 @@
                 </div><!--/.col-md-4-->
 
                 <div class="col-md-4 col-sm-6 wow fadeInUp animated" data-wow-duration="300ms"
-                    data-wow-delay="500ms"
-                    style="visibility: visible; -webkit-animation-duration: 300ms; -webkit-animation-delay: 500ms;">
+                     data-wow-delay="500ms"
+                     style="visibility: visible; -webkit-animation-duration: 300ms; -webkit-animation-delay: 500ms;">
                     <div class="media service-box">
                         <div class="pull-left">
                             <i class="fa fa-cubes"></i>
@@ -157,7 +162,7 @@
                     minus temporibus perferendis nesciunt quam repellendus nulla nemo ipsum odit corrupti
                     consequuntur possimus..
                 </div>
-                <br />
+                <br/>
             </div>
         </div>
         <div class="row">
@@ -182,7 +187,8 @@
                     <li><i class="fa fa-arrow-circle-right pr-10 colored"></i> Consectetur adipisicing elit</li>
                     <li><i class="fa fa-arrow-circle-right pr-10 colored"></i> Lorem ipsum dolor sit amet</li>
                     <li><i class="fa fa-arrow-circle-right pr-10 colored"></i> Quo issimos molest quibusdam
-                        temporibus</li>
+                        temporibus
+                    </li>
                 </ul>
             </div>
         </div>
