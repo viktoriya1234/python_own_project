@@ -319,6 +319,16 @@ display: inline-block;
 .navbar .nav >  li:nth-child(6) > a  {  
   background: rgb(255, 184, 0);
 }
+
+.navbar .nav >  li:nth-child(7) > a  {
+  background: rgb(25, 18, 0);
+}
+.navbar .nav >  li:nth-child(8) > a  {
+  background: rgb(25, 18, 0);
+}
+.navbar .nav >  li:nth-child(9) > a  {
+  background: rgb(25, 18, 0);
+}
 /*  Sliders
 ==================================== */
 /* --- flexslider --- */
@@ -457,7 +467,6 @@ display: block;
 max-width: 100%;
 }
 
-
 img.img-center {
 	margin: 0 auto;
 	display: block;
@@ -475,9 +484,7 @@ img.img-center {
 .flexslider input{
 	display: none;
 }
-.flexslider #slider1:checked ~ ul li:nth-child(1){
-	display: block;
-}
+.flexslider #slider1:checked ~ ul li:nth-child(1),
 .flexslider #slider2:checked ~ ul li:nth-child(2){
 	display: block;
 }
@@ -500,6 +507,8 @@ img.img-center {
 .flexslider #slider2:checked ~ .radio-label label:nth-child(2){
 	background-color:  #496d04;
 }
+
+
 /* Testimonial
 ----------------------------------*/
 .testimonial-area {
@@ -1545,6 +1554,10 @@ article img.pull-right, article .align-right{
   color: #E7094C;
   /* border: 4px solid #fff; */
 }
+.features .wow .media-body{
+    height: 130px;
+    overflow: hidden;
+}
 .media.service-box .pull-left > i {
   font-size: 59px;
   /* height: 63px; */
@@ -1621,7 +1634,7 @@ article img.pull-right, article .align-right{
   padding: 15px 30px;
   margin-bottom: 40px;
   outline: none;
-  height: 150px;
+  height: 200px;
 } 
 .contact .submit {
   background: #5DA5E4; 

@@ -4,12 +4,13 @@
 <head>
     <meta charset="utf-8">
 
-    <title>My school</title>
+    <!-- title -->
+    <title>Моя школа</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta name="description" content="School news site number 15" />
-    <meta name="author" content="Павлюк Вікторія" />
+    <meta name="description" content="Сторінка новин школи №111" />
+    <meta name="author" content="Михайло Васильович" />
     <!-- css -->
     <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" />
     <link href="{{ url_for('static', filename='css/fancybox/jquery.fancybox.css') }}" rel="stylesheet">
@@ -30,35 +31,47 @@
                             <span class="icon-bar"></span>
                         </button>
                         <a class="navbar-brand" href="/">
-                            <img src="{{ url_for('static', filename='img/logo.png') }}">
+                            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="logo" />
                         </a>
                     </div>
                     <div class="navbar-collapse collapse ">
                         <ul class="nav navbar-nav">
                             <li class="active"><a href="/">Домашня</a></li>
-                            <li><a href="/about">Про нас</a></li>
-                            <li><a href="/services">Сервіси</a></li>
-                            <li><a href="/courses">Курси</a></li>
-                            <li><a href="/pricing">Ціни</a></li>
+                            <li><a href="/news">Новини</a></li>
+                            <!--
                             <li><a href="/contact">Контакти</a></li>
+                            <li><a href="/about">Про нас</a></li>
+                            <li><a href="/pricing">Ціни</a></li>
+                            <li><a href="/courses">Курси</a></li>
+                            -->
+                            <!-- Admin -->
+                            {% if session %}
+                            <li><a href="/add_news">Додати новину</a></li>
+                            <li><a href="/logout">Вийти <i class="fa fa-sign-out"></i></a></li>
+                            {% else %}
+                            <li><a href="/login">Вхід <i class="fa fa-sign-in"></i></a></li>
+                            {% endif %}
                         </ul>
                     </div>
                 </div>
             </div>
         </header>
+        <!-- end header -->
 
+        <!-- main -->
         <main>
             {% block main %} {% endblock %}
         </main>
 
+        <!-- footer -->
         <footer>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3">
+                    <div class="col-lg-4">
                         <div class="widget">
-                            <h5 class="widgetheading">Our Contact</h5>
+                            <h5 class="widgetheading">Наші контакти</h5>
                             <address>
-                                <strong>Your School Name</strong><br>
+                                <strong>Школа №10</strong><br>
                                 JC Main Road, Near Silnile tower<br>
                                 Pin-21542 NewYork US.
                             </address>
@@ -68,29 +81,19 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-4">
                         <div class="widget">
                             <h5 class="widgetheading">Quick Links</h5>
                             <ul class="link-list">
                                 <li><a href="#">Latest Events</a></li>
                                 <li><a href="#">Terms and conditions</a></li>
                                 <li><a href="#">Privacy policy</a></li>
-                                <li><a href="#">Career</a></li>
                                 <li><a href="#">Contact us</a></li>
+
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-3">
-                        <div class="widget">
-                            <h5 class="widgetheading">Latest posts</h5>
-                            <ul class="link-list">
-                                <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
-                                <li><a href="#">Pellentesque et pulvinar enim. Quisque at tempor ligula</a></li>
-                                <li><a href="#">Natus error sit voluptatem accusantium doloremque</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-4">
                         <div class="widget">
                             <h5 class="widgetheading">Recent News</h5>
                             <ul class="link-list">

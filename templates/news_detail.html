@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block main %}
+<section id="content">
+    <div class="container content">
+        <div class="row">
+            <div class="col-md-12">
+                <div><img src="{{ news_item.image }}" alt="photo"></div>
+                <h2>{{ news_item.name }}</h2>
+                <p>{{ news_item.text|safe }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
